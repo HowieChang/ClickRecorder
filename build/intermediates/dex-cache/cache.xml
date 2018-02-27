@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/howie/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.0.0-alpha2.aar/9dd4fa7ea92a08424d43f57cfbbd587a/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="df7f6513d6e2aaa302bbac654807c6129b517090">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/howie/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.0.0-alpha2.aar/8ffdb98b6e3197d1b96e2d657ebe717d/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bf5aa3b026d5b5fd9f4ab5e8cf13499b9e016dfb">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/howie/.gradle/caches/transforms-1/files-1.1/support-v4-24.0.0-alpha2.aar/2c9d6c3a4c731fab17a90449f9abf31c/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/howie/.gradle/caches/transforms-1/files-1.1/support-v4-24.0.0-alpha2.aar/2c9d6c3a4c731fab17a90449f9abf31c/jars/libs/internal_impl-24.0.0-alpha2.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/howie/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0-alpha2/support-annotations-24.0.0-alpha2.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/howie/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.0.0-alpha2.aar/4bd6663bdc01cb1c071df5556a0861c4/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="24"
+        optimize="true"
+        revision="26.0.2"
+        sha1="661a632c3b434991d6364690cbe0f786371101cc">
+        <dex dex="/1000mb/App/android-n-quick-settings-master/app/build/intermediates/transforms/preDex/start/release/1.jar" />
+    </item>
+
+</items>
