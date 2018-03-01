@@ -50,7 +50,7 @@ public class QuickSettingsService
         mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
-        mOutputFile = CameraHelper.getOutputMediaFile(CameraHelper.MEDIA_TYPE_AUDIO);
+                mOutputFile = CameraHelper.getOutputMediaFile(CameraHelper.MEDIA_TYPE_AUDIO);
         if (mOutputFile == null) {
             return false;
         }
