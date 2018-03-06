@@ -1,10 +1,5 @@
-# Android N Quick Settings Codelab
+This folder contains the source code from [Google I/O 2016 codelab on Android N Quick Settings](https://codelabs.developers.google.com/codelabs/android-n-quick-settings/#0).
 
-This folder contains the source code for a [Google I/O 2016 codelab on Android N Quick Settings](https://codelabs.developers.google.com/codelabs/android-n-quick-settings/#0).
-
-## Demo
-
-![Demo of Quick Settings tile in tutorial](https://github.com/googlecodelabs/android-n-quick-settings/blob/master/extras/demo.gif?raw=true)
 
 ### License
 
