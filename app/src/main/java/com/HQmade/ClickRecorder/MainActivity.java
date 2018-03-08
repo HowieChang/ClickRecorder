@@ -15,7 +15,9 @@
 package com.HQmade.ClickRecorder;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -25,6 +27,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -38,7 +41,9 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-    public static boolean isPlay = false;
+    public boolean isPlay = false;
+    public int playingID = -1;
+
     public ProgressBar progressBar;
     private MediaPlayer mp;
     private static final String TAG = "ClickRecorder";
@@ -61,31 +66,41 @@ public class MainActivity extends AppCompatActivity {
         Arrays.sort(FileListArray);
         ListView FileList = (ListView) findViewById(R.id.FileList);
         ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1);
+                android.R.layout.simple_list_item_activated_1);
 
         for(File file:FileListArray) {
             // prints file and directory paths
             adapter.add(file.getName());
+
         }
 
+
         FileList.setAdapter(adapter);
+
         FileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView arg0, View arg1, int arg2,
-                                    long arg3) {
+            public void onItemClick(final AdapterView arg0, final View arg1, final int arg2,
+                                    final long arg3) {
+
                 TextView statusText = (TextView) findViewById(R.id.StatusText);
 
-
                 ListView FileList = (ListView) arg0;
+                //Log.d(TAG, "Clicked, POS:"+arg2+", ID:"+arg3);
+                //Log.d(TAG, "Clicked View ID:"+arg1.getId());
+
                 File path = new File(Environment.getExternalStoragePublicDirectory(
                         Environment.DIRECTORY_MUSIC), "ClickRecorder");
                 File file = new File(path, FileList.getItemAtPosition(arg2).toString());
 
+
+
                 isPlay = !isPlay;
                 if (isPlay) {
-
-                    Log.d(TAG, "Start play");
+                    arg1.setPressed(true);
+                    arg1.setBackgroundColor(Color.LTGRAY);
+                    playingID = arg2;
+                    Log.d(TAG, "Start play ID:"+arg3);
                     statusText.setText(R.string.Status_2);
                     mp = new MediaPlayer() {};
                     mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -102,18 +117,32 @@ public class MainActivity extends AppCompatActivity {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+
                     mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
                         public void onCompletion(MediaPlayer mp) {
+                            ListView mListView = (ListView) findViewById(R.id.FileList);
                             TextView statusText = (TextView) findViewById(R.id.StatusText);
-                            Log.d(TAG, "Complete play");
+                            mListView.getOnItemClickListener().onItemClick(arg0, arg1, arg2, arg3);
+                            //arg1.setBackgroundColor(Color.WHITE);
+                            Log.d(TAG, "Complete play ID:"+arg3);
                             statusText.setText(R.string.Status_3);
                             isPlay=false;
                         }
                     });
+
+
                     mp.start();
 
                 } else {
-                    Log.d(TAG, "Stop play");
+                    //arg1.
+                    //Log.d(TAG, "isPressed:"+arg1.isPressed());
+
+
+
+                    FileList.getChildAt(playingID).setBackgroundColor(Color.WHITE);
+                    Log.d(TAG, "Stop play ID:"+arg3);
+
                     statusText.setText(R.string.Status_1);
 
                     mp.stop();

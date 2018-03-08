@@ -30,8 +30,8 @@
     <string name="result_output" formatted="false">The %s tile is %s.</string>
     <string name="result_return">Return to home</string>
     <string name="record_start">Start Recording</string>
-    <string name="browse">Browse</string>
-    <string name="Status_1">Choose clip to play</string>
+
+    <string name="Status_1">Choose one to play</string>
     <string name="Status_2">Now playing...</string>
     <string name="Status_3">Completed, choose next</string>
 </resources>
